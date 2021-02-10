@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B57FA827-6CA3-4F98-9417-F1EDA6A983B6}</ProjectGuid>
+    <RootNamespace>XEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\$(ProjectName)\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <IntDir>$(ProjectDir)\build\debug\x86\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)build\release\x86\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(ProjectName)\</OutDir>
+    <TargetName>$(ProjectName)_x64_d</TargetName>
+    <IntDir>$(ProjectDir)build\debug\x64\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(ProjectName)\</OutDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+    <IntDir>$(ProjectDir)build\release\x64\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\;$(ProjectDir)include\DevIL</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL\DevIL.lib;DevIL\ILU.lib;DevIL\ILUT.lib;Assimp\assimp.lib;GLEW\libglew32_d.lib;GLFW\glfw3_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\;D:\Coding Projects\Visual Studio\Xen Engine\XEngine\include\DevIL</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL\DevIL.lib;DevIL\ILU.lib;DevIL\ILUT.lib;Assimp\assimp.lib;GLEW\libglew32_d.lib;GLFW\glfw3_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\;$(ProjectDir)include\DevIL</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL\DevIL.lib;DevIL\ILU.lib;DevIL\ILUT.lib;Assimp\assimp.lib;GLEW\libglew32.lib;GLFW\glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\;$(ProjectDir)include\DevIL</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL\DevIL.lib;DevIL\ILU.lib;DevIL\ILUT.lib;Assimp\assimp.lib;GLEW\libglew32.lib;GLFW\glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\graphics\Camera.cpp" />
+    <ClCompile Include="src\core\graphics\display\XMonitor.cpp" />
+    <ClCompile Include="src\core\graphics\display\XWindow.cpp" />
+    <ClCompile Include="src\core\graphics\XCubeMap.cpp" />
+    <ClCompile Include="src\core\graphics\XGLFramebuffer.cpp" />
+    <ClCompile Include="src\core\graphics\XMesh.cpp" />
+    <ClCompile Include="src\core\graphics\XGLBuffer.cpp" />
+    <ClCompile Include="src\core\graphics\XGLVertexArray.cpp" />
+    <ClCompile Include="src\core\graphics\XImage.cpp" />
+    <ClCompile Include="src\core\graphics\XModel.cpp" />
+    <ClCompile Include="src\core\graphics\XShaderGL.cpp" />
+    <ClCompile Include="src\core\graphics\XTexture2D.cpp" />
+    <ClCompile Include="src\core\input\XInput.cpp" />
+    <ClCompile Include="src\core\math\XConstants.cpp" />
+    <ClCompile Include="src\core\math\XExponential.cpp" />
+    <ClCompile Include="src\core\math\XTrigonometric.cpp" />
+    <ClCompile Include="src\core\XEngine.cpp" />
+    <ClCompile Include="src\game\Boat.cpp" />
+    <ClCompile Include="src\game\Water.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\Assimp\assimp.lib" />
+    <Library Include="libs\DevIL\DevIL.lib" />
+    <Library Include="libs\DevIL\ILU.lib" />
+    <Library Include="libs\DevIL\ILUT.lib" />
+    <Library Include="libs\GLEW\libglew32.lib" />
+    <Library Include="libs\GLEW\libglew32_d.lib" />
+    <Library Include="libs\GLFW\glfw3.lib" />
+    <Library Include="libs\GLFW\glfw3_d.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\core\graphics\Camera.h" />
+    <ClInclude Include="include\core\graphics\display\XMonitor.h" />
+    <ClInclude Include="include\core\graphics\display\XWindow.h" />
+    <ClInclude Include="include\core\graphics\XCubeMap.h" />
+    <ClInclude Include="include\core\graphics\XGLFramebuffer.h" />
+    <ClInclude Include="include\core\graphics\XModel.h" />
+    <ClInclude Include="include\core\graphics\XGLBuffer.h" />
+    <ClInclude Include="include\core\graphics\XGLVertexArray.h" />
+    <ClInclude Include="include\core\graphics\XImage.h" />
+    <ClInclude Include="include\core\graphics\XMesh.h" />
+    <ClInclude Include="include\core\graphics\XShaderGL.h" />
+    <ClInclude Include="include\core\graphics\XTexture2D.h" />
+    <ClInclude Include="include\core\input\XInput.h" />
+    <ClInclude Include="include\core\math\XCommon.h" />
+    <ClInclude Include="include\core\math\XConstants.h" />
+    <ClInclude Include="include\core\math\XExponential.h" />
+    <ClInclude Include="include\core\math\XMath.h" />
+    <ClInclude Include="include\core\math\XMatrix.h" />
+    <ClInclude Include="include\core\math\XTransform.h" />
+    <ClInclude Include="include\core\math\XTrigonometric.h" />
+    <ClInclude Include="include\core\math\XVector.h" />
+    <ClInclude Include="include\core\XEngine.h" />
+    <ClInclude Include="include\game\Boat.h" />
+    <ClInclude Include="include\game\Water.h" />
+    <ClInclude Include="include\GLFW\glfw3.h" />
+    <ClInclude Include="include\GLFW\glfw3native.h" />
+    <ClInclude Include="include\GL\eglew.h" />
+    <ClInclude Include="include\GL\glew.h" />
+    <ClInclude Include="include\GL\glxew.h" />
+    <ClInclude Include="include\GL\wglew.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assimp-vc140-mt.dll" />
+    <None Include="DevIL.dll" />
+    <None Include="ILU.dll" />
+    <None Include="ILUT.dll" />
+    <None Include="resources\shaders\BoatFragShader.glsl" />
+    <None Include="resources\shaders\BoatVertShader.glsl" />
+    <None Include="resources\shaders\fragShader.glsl" />
+    <None Include="resources\shaders\fragShaderBox.glsl" />
+    <None Include="resources\shaders\QuadFragShader.glsl" />
+    <None Include="resources\shaders\QuadVertShader.glsl" />
+    <None Include="resources\shaders\ShadowVertShader.glsl" />
+    <None Include="resources\shaders\SkyBoxFragShader.glsl" />
+    <None Include="resources\shaders\SkyBoxVertShader.glsl" />
+    <None Include="resources\shaders\TextureFragShader.glsl" />
+    <None Include="resources\shaders\TextureVertShader.glsl" />
+    <None Include="resources\shaders\triFragShader.glsl" />
+    <None Include="resources\shaders\triVertShader.glsl" />
+    <None Include="resources\shaders\vertShader.glsl" />
+    <None Include="resources\shaders\vertShaderBox.glsl" />
+    <None Include="resources\shaders\WaterFragShader.glsl" />
+    <None Include="resources\shaders\WaterVertShader.glsl" />
+    <None Include="src\core\graphics\Mesh.inl" />
+    <None Include="src\core\graphics\XGLBuffer.inl" />
+    <None Include="src\core\math\XCommon.inl" />
+    <None Include="src\core\math\XExponential.inl" />
+    <None Include="src\core\math\XMatrix.inl" />
+    <None Include="src\core\math\XTransform.inl" />
+    <None Include="src\core\math\XTrigonometric.inl" />
+    <None Include="src\core\math\XVector.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

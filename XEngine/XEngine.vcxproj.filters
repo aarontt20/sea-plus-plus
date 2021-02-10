@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\core\XEngine.cpp" />
+    <ClCompile Include="src\core\graphics\display\XMonitor.cpp" />
+    <ClCompile Include="src\core\graphics\display\XWindow.cpp" />
+    <ClCompile Include="src\core\input\XInput.cpp" />
+    <ClCompile Include="src\core\math\XConstants.cpp" />
+    <ClCompile Include="src\core\math\XExponential.cpp" />
+    <ClCompile Include="src\core\math\XTrigonometric.cpp" />
+    <ClCompile Include="src\core\graphics\XShaderGL.cpp" />
+    <ClCompile Include="src\game\Boat.cpp" />
+    <ClCompile Include="src\core\graphics\Camera.cpp" />
+    <ClCompile Include="src\core\graphics\XImage.cpp" />
+    <ClCompile Include="src\core\graphics\XTexture2D.cpp" />
+    <ClCompile Include="src\core\graphics\XGLVertexArray.cpp" />
+    <ClCompile Include="src\core\graphics\XGLBuffer.cpp" />
+    <ClCompile Include="src\core\graphics\XMesh.cpp" />
+    <ClCompile Include="src\core\graphics\XModel.cpp" />
+    <ClCompile Include="src\core\graphics\XCubeMap.cpp" />
+    <ClCompile Include="src\core\graphics\XGLFramebuffer.cpp" />
+    <ClCompile Include="src\game\Water.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\GLEW\libglew32.lib" />
+    <Library Include="libs\GLEW\libglew32_d.lib" />
+    <Library Include="libs\GLFW\glfw3.lib" />
+    <Library Include="libs\GLFW\glfw3_d.lib" />
+    <Library Include="libs\Assimp\assimp.lib" />
+    <Library Include="libs\DevIL\DevIL.lib" />
+    <Library Include="libs\DevIL\ILU.lib" />
+    <Library Include="libs\DevIL\ILUT.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\core\XEngine.h" />
+    <ClInclude Include="include\core\math\XCommon.h" />
+    <ClInclude Include="include\core\math\XConstants.h" />
+    <ClInclude Include="include\core\math\XExponential.h" />
+    <ClInclude Include="include\core\math\XMath.h" />
+    <ClInclude Include="include\core\math\XMatrix.h" />
+    <ClInclude Include="include\core\math\XTransform.h" />
+    <ClInclude Include="include\core\math\XTrigonometric.h" />
+    <ClInclude Include="include\core\math\XVector.h" />
+    <ClInclude Include="include\core\input\XInput.h" />
+    <ClInclude Include="include\core\graphics\display\XMonitor.h" />
+    <ClInclude Include="include\core\graphics\display\XWindow.h" />
+    <ClInclude Include="include\GL\eglew.h" />
+    <ClInclude Include="include\GL\glew.h" />
+    <ClInclude Include="include\GL\glxew.h" />
+    <ClInclude Include="include\GL\wglew.h" />
+    <ClInclude Include="include\GLFW\glfw3.h" />
+    <ClInclude Include="include\GLFW\glfw3native.h" />
+    <ClInclude Include="include\core\graphics\XShaderGL.h" />
+    <ClInclude Include="include\game\Boat.h" />
+    <ClInclude Include="include\core\graphics\Camera.h" />
+    <ClInclude Include="include\core\graphics\XTexture2D.h" />
+    <ClInclude Include="include\core\graphics\XImage.h" />
+    <ClInclude Include="include\core\graphics\XGLBuffer.h" />
+    <ClInclude Include="include\core\graphics\XGLVertexArray.h" />
+    <ClInclude Include="include\core\graphics\XMesh.h" />
+    <ClInclude Include="include\core\graphics\XModel.h" />
+    <ClInclude Include="include\game\Water.h" />
+    <ClInclude Include="include\core\graphics\XGLFramebuffer.h" />
+    <ClInclude Include="include\core\graphics\XCubeMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\core\math\XCommon.inl" />
+    <None Include="src\core\math\XExponential.inl" />
+    <None Include="src\core\math\XMatrix.inl" />
+    <None Include="src\core\math\XTransform.inl" />
+    <None Include="src\core\math\XTrigonometric.inl" />
+    <None Include="src\core\math\XVector.inl" />
+    <None Include="assimp-vc140-mt.dll" />
+    <None Include="DevIL.dll" />
+    <None Include="ILU.dll" />
+    <None Include="ILUT.dll" />
+    <None Include="src\core\graphics\XGLBuffer.inl" />
+    <None Include="src\core\graphics\Mesh.inl" />
+    <None Include="resources\shaders\BoatVertShader.glsl" />
+    <None Include="resources\shaders\BoatFragShader.glsl" />
+    <None Include="resources\shaders\fragShader.glsl" />
+    <None Include="resources\shaders\fragShaderBox.glsl" />
+    <None Include="resources\shaders\TextureFragShader.glsl" />
+    <None Include="resources\shaders\TextureVertShader.glsl" />
+    <None Include="resources\shaders\triFragShader.glsl" />
+    <None Include="resources\shaders\triVertShader.glsl" />
+    <None Include="resources\shaders\vertShader.glsl" />
+    <None Include="resources\shaders\vertShaderBox.glsl" />
+    <None Include="resources\shaders\QuadFragShader.glsl" />
+    <None Include="resources\shaders\QuadVertShader.glsl" />
+    <None Include="resources\shaders\ShadowVertShader.glsl" />
+    <None Include="resources\shaders\SkyBoxFragShader.glsl" />
+    <None Include="resources\shaders\SkyBoxVertShader.glsl" />
+    <None Include="resources\shaders\WaterFragShader.glsl" />
+    <None Include="resources\shaders\WaterVertShader.glsl" />
+  </ItemGroup>
+</Project>
